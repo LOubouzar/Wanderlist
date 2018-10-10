@@ -23,10 +23,8 @@ app.use(session({ secret: "wanderstuff", resave: true, saveUninitialized: true }
 app.use(passport.initialize());
 app.use(passport.session());
 
-var routes = require("./controllers/controller.js");
-
-app.use(routes);
-
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {

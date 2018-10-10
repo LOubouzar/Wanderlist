@@ -7,14 +7,14 @@ var passport = require("./config/passport");
 var PORT = process.env.PORT || 1337;
 var db = require("./models");
 
-var app = express();
-
 // Set Handlebars.
-var exphbs = require("express-handlebars");
+// var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
+//Express Setup
+var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

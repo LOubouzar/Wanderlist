@@ -1,0 +1,304 @@
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background: #e5e5e5;
+
+}
+
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+#top-title{
+    padding-top: 5%;
+}
+
+
+.hero-body{
+    padding-top: 2%;
+}
+
+/*TRIPS__________________________________________*/
+.media-content{
+    text-align: center;
+}
+
+#hotel-card{
+    -webkit-box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+-moz-box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+box-shadow: -7px 11px 25px -9px rgba(0,0,0,1);
+border-radius: 1.5rem;
+}
+
+/*FOOTER_____________________________________________*/
+
+#social{
+    height: 30px;
+    width: 30px;
+}
+
+.logo1-icons{
+    height: 10px;
+    width: 10px;
+    /* padding-top: 3%; */
+}
+
+.footer{
+    padding: 3rem 1.5rem 4rem !important;
+}
+
+/*HOTEL DETAILS_______________________________________*/
+
+[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+
+
+  label {
+    display: block;
+  }
+
+
+  #country{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 150px;
+  }
+
+  #city{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 200px;
+  }
+
+  #address{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 200px;
+  }
+
+  #zip-code{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 150px;
+  }
+
+  #arrivaldates{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 160px;
+  }
+  
+  #departuredates{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 160px;
+  }
+
+  #hotel-number{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 200px;
+  }
+
+
+  .button.is-primary{
+    background-color: rgb(253, 120, 120) !important;
+
+}
+
+/*FLIGHT DETAILS__________________________________________*/
+#departing-flight-1{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#departing-flight-2{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#arrival-flight-1{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#arrival-flight-2{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#airport-1{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 60px;
+}
+
+#airport-2{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 50px;
+}
+
+#flight-number-1{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#seat-number-1{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#confirmation-number-1{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+
+
+
+#departing-flight-2{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#departing-flight-3{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#arrival-flight-2{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#arrival-flight-3{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+
+#flight-number-2{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#seat-number-2{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#confirmation-number-2{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 150px;
+}
+
+#airport-3{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 60px;
+}
+
+#airport-4{
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+      width: 50px;
+}

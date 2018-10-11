@@ -21,10 +21,10 @@ $(document).ready(function () {
   });
 
   var signUpForm = $("form.signUp");
-  var emailInput = $("input#emailInput")
+  var emailInput = $("input#emailInput");
   var passwordInput = $("input#passwordInput");
 
-  signUpForm.on("signup", function (event) {
+  signUpForm.on("click", function (event) {
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),
@@ -35,7 +35,8 @@ $(document).ready(function () {
       return;
     }
     signUpUser(userData.email, userData.password);
-    emailInput.val("");
+    var emailTest = emailInput.val("");
+    console.log(emailTest);
     passwordInput.val("");
   });
 

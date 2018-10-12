@@ -19,6 +19,20 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/api/list", function(req, res) {
+    console.log(req.body);
+    db.List.create({
+      item: req.body.value1,
+      quantity: req.body.value2,
+      packed: req.body.value4
+    }).then(function() {
+      res.redirect(307, "/api/list");
+    }).catch(function(err) {
+      console.log(err);
+      res.json(err);
+    });
+  });
+
   app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");

@@ -1,15 +1,14 @@
+// Toggle password visibility 
+function myFunction() {
+  var x = document.getElementById("passwordInput");
+  if (x.type === "password") {
+      x.type = "text";
+  } else {
+      x.type = "password";
+  }
+}
 
 //WHITE SCROLL
-$(document).ready(function() {
-
-    $(window).scroll(function() {
-      if ($(window).scrollTop() > 10) {
-        $(".navbar").addClass("bg-dark");
-      } else {
-        $(".navbar").removeClass("bg-dark");
-      }
-    });
-
 
 $(document).ready(function () {
   $(window).scroll(function () {
@@ -24,8 +23,10 @@ $(document).ready(function () {
   var emailInput = $("input#emailInput");
   var passwordInput = $("input#passwordInput");
 
-  signUpForm.on("click", function (event) {
+  signUpForm.on("submit", function (event) {
+    
     event.preventDefault();
+    console.log("Hi!");
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
@@ -58,7 +59,7 @@ $(document).ready(function () {
 
 
 
- 
+
 
 
 

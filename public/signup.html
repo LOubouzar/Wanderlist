@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WanderList
     </title>
+
+      <!-- Favicons -->
+  <link href="./media/favicon.png" rel="icon">
+  <link href="./media/favicon.png" rel="apple-touch-icon">
     <!--Bulma-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -14,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet">
     <!-- Main Stylesheet File -->
     <link href="./css/style.css" rel="stylesheet">
 
@@ -24,12 +29,12 @@
     <section class="hero is-primary is-fullheight is-hero-image">
         <div class="hero-head">
             <!--Navbar-->
-            <nav class="navbar navbar-default is-fixed-top">
+            <nav class="navbar navbar-default is-fixed-top is-white">
                 <div class="container">
                     <div class="navbar-brand">
                         <!-- <h6>WANDERLIST</h6> -->
-                        <a class="navbar-item" href="https://bulma.io">
-                            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                        <a class="navbar-item" href="#" id="navbar-logo">
+                            <img src="./media/globe2.png" id="logo-image">wanderlist
                           </a>
                         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                             <span aria-hidden="true"></span>
@@ -39,14 +44,14 @@
                     </div>
                     <div id="navbarMenuHeroA has-text-centered" class="navbar-menu">
                         <div class="navbar-start">
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="#hero-header">
+                                HOME
+                            </a>
+                            <a class="navbar-item" href="#hero-body">
                                 ABOUT
                             </a>
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="#footer">
                                 CONTACT
-                            </a>
-                            <a class="navbar-item">
-                                MY ACCOUNT
                             </a>
                         </div>
                     </div>
@@ -54,7 +59,7 @@
             </nav>
         </div>
         <!--Hero Header-->
-        <div class="hero-body">
+        <div class="hero-body" id="hero-header">
             <div class="container">
                 <div class="columns">
                     <div class="column is-4">
@@ -85,19 +90,22 @@
                                     </div>
                                     <div class="field">
                                         <p class="control has-icons-left">
-                                            <input id="passwordInput" class="input" type="password" placeholder="Password">
+                                            <input type="password" value="" id="passwordInput" class="input" placeholder="password">
+                                            <input type="checkbox" id="passwordCheckbox" value="" onclick="myFunction()">Show Password
                                             <span class="icon is-small is-left">
                                                 <i class="fas fa-lock"></i>
                                             </span>
                                         </p>
                                     </div>
-                                    <a class="button is-primary" id="signup">SIGN UP</a>'
+
+                                    <button class="button is-primary" type="submit" id="signup">SIGN UP</button>
                                 </div>
                             </form>
                             <br>
                             <br>
-                            <p class="login has-text-centered">Already have an account? <a href="../public/login.html" id="login-button">Login
+                            <p class="login has-text-centered">Already have an account? <a href="./login.html" id="login-button">Login
                                     Here</a></p>
+
 
                             </div>
 
@@ -114,7 +122,7 @@
 
     <!--About Section-->
     <section class="hero" id="hero2">
-        <div class="hero-body">
+        <div class="hero-body" id="hero-body">
             <div class="container">
                 <div class="columns">
                     <div class="column is-4">
@@ -242,7 +250,7 @@
 
 
     <!--Footer-->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="columns">
             <div class="column is-2 is-offset-1">
             <p>

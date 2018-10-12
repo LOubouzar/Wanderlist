@@ -1,7 +1,7 @@
 /*NAVBAR___________________________________*/
 .navbar.is-fixed-top.bg-dark{
     background-color: white;
-    color: rgb(44, 44, 44);
+    color: rgb(44, 44, 44) !important;
     -webkit-box-shadow: 0 8px 6px -6px #999;
       -moz-box-shadow: 0 8px 6px -6px #999;
       box-shadow: 0 8px 6px -6px #999;
@@ -11,6 +11,20 @@
 	border-color: transparent;
   /* background-color: rgba(255, 255, 255, 0.5); */
   background-color: transparent;
+}
+
+.navbar.is-white{
+    color: white !important;
+}
+
+.navbar-blue{
+    background-color: aqua;
+}
+
+#navbar-logo{
+    font-family: 'Prata', serif;
+    font-size: 20px;
+    color: rgb(15, 76, 190) !important;
 }
 
   /* .navbar-item:hover{
@@ -40,10 +54,10 @@ body {
      background-color: #999;
 
 }
-
-/* #signup-card{
-    margin-left: 25%;
-} */
+ #signup-card{
+    
+    padding-bottom: 5%;
+} 
 
 
 #login-button{
@@ -60,6 +74,11 @@ body {
 h1 {
     font-size: 40px !important;
 }
+
+#logo-image{
+    height: 100px;
+    width: 30px;
+}
 /*CARD SECTION_____________________________________________*/
 
 
@@ -74,6 +93,12 @@ h6 {
   padding-top: 3%;
 }
 
+#signup-card{
+    -webkit-box-shadow: -7px 11px 25px -5px rgba(0,0,0,1);
+    -moz-box-shadow: -7px 11px 25px -5px rgba(0,0,0,1);
+    box-shadow: -7px 11px 25px -5px rgba(0,0,0,1);
+    border-radius: 1.5rem;
+}
 
 /*EXAMPLE SECTION_______________________________________________*/
 #section2{

@@ -1,6 +1,3 @@
-
-//WHITE SCROLL
-
 $(document).ready(function () {
   $(window).scroll(function () {
     if ($(window).scrollTop() > 10) {
@@ -16,7 +13,6 @@ $(document).ready(function () {
 
   signUpForm.on("click", function (event) {
     event.preventDefault();
-    console.log("Hi!");
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
@@ -46,7 +42,6 @@ $(document).ready(function () {
   };
 
 });
-
 
 
 

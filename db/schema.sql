@@ -1,5 +1,5 @@
 --Drops DB
-DROP DATABASE IF EXISTS fop54u9gct59z8vh;
+DROP DATABASE IF EXISTS wanderlistDB;
 -- Create DB
 CREATE DATABASE wanderlistDB;
 

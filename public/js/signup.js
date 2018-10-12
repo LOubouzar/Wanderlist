@@ -1,3 +1,16 @@
+
+// Toggle password visibility 
+function myFunction() {
+  var x = document.getElementById("passwordInput");
+  if (x.type === "password") {
+      x.type = "text";
+  } else {
+      x.type = "password";
+  }
+}
+
+//WHITE SCROLL
+
 $(document).ready(function () {
   $(window).scroll(function () {
     if ($(window).scrollTop() > 10) {
@@ -11,7 +24,8 @@ $(document).ready(function () {
   var emailInput = $("input#emailInput");
   var passwordInput = $("input#passwordInput");
 
-  signUpForm.on("click", function (event) {
+  signUpForm.on("submit", function (event) {
+    
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),

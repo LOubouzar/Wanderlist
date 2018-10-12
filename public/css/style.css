@@ -1,6 +1,15 @@
 /*NAVBAR___________________________________*/
 
 
+#navbar-logo{
+    font-family: 'Prata', serif;
+    font-size: 20px;
+    color: rgb(15, 76, 190) !important;
+}
+
+  /* .navbar-item:hover{
+    background-color: rgb(253, 120, 120) !important;
+} */
 
 /*LANDING PAGE_____________________________*/
 /* #button1{
@@ -20,10 +29,10 @@
      background-color: #999;
 
 }
-
-/* #signup-card{
-    margin-left: 25%;
-} */
+ #signup-card{
+    
+    padding-bottom: 5%;
+} 
 
 
 #login-button{
@@ -35,6 +44,17 @@
 .button.is-primary{
     background-color: rgb(253, 120, 120) !important;
 }
+
+
+h1 {
+    font-size: 40px !important;
+}
+
+#logo-image{
+    height: 100px;
+    width: 30px;
+}
+
 /*CARD SECTION_____________________________________________*/
 
 

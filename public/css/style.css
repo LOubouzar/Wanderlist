@@ -21,6 +21,12 @@
     background-color: aqua;
 }
 
+#navbar-logo{
+    font-family: 'Prata', serif;
+    font-size: 20px;
+    color: rgb(15, 76, 190) !important;
+}
+
   /* .navbar-item:hover{
     background-color: rgb(253, 120, 120) !important;
 } */
@@ -48,10 +54,10 @@ body {
      background-color: #999;
 
 }
-
-/* #signup-card{
-    margin-left: 25%;
-} */
+ #signup-card{
+    
+    padding-bottom: 5%;
+} 
 
 
 #login-button{
@@ -67,6 +73,11 @@ body {
 
 h1 {
     font-size: 40px !important;
+}
+
+#logo-image{
+    height: 100px;
+    width: 30px;
 }
 /*CARD SECTION_____________________________________________*/
 

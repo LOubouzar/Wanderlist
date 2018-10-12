@@ -67,33 +67,45 @@
                     <div class="column has-text-centered is-6 is-offset-1">
                         <div class="card" id="signup-card">
                             <div class="card-content has-text-centered">
-                                <h3>CREATE AN ACCOUNT NOW</h3>
+                                <h3>LOGIN NOW</h3>
                             </div>
+                            <form class="loginForm">
                             <div class="card-content">
                                 <div class="field">
                                     <p class="control has-icons-left has-icons-right">
-                                        <input class="input" type="emailInput" placeholder="Email">
+                                        <input class="input" type="email" id="emailInput" placeholder="Email">
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-envelope"></i>
                                         </span>
                                     </p>
                                 </div>
                                 <div class="field">
-                                    <p class="control has-icons-left">
-                                        <input class="input" type="passwordInput" placeholder="Password">
-                                        <span class="icon is-small is-left">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </p>
+                                        <p class="control has-icons-left">
+                                            <input type="password" value="" id="passwordInput" class="input" placeholder="password">
+                                            <input type="checkbox" id="passwordCheckbox" value="" onclick="myFunction()">Show Password
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                <button class="button is-primary" type="submit" id="submit">LOGIN</button>
                                 </div>
-                                <a class="button is-primary" id="login">LOGIN</a>
+                                </form>
                                 <br>
                                 <br>
-                                <p class="login has-text-centered">Need to sign up? <a href="../public/signup.html" id="loginButton">Create an account here</a></p>
+                                <p class="login has-text-centered">Need to sign up? <a href="./login.html" id="login-button">Create an account here</a></p>
                             </div>
-
-
                         </div>
+                        <!--Card Closing-->
+                    </div>
+                    <!--Card Column Closing-->
+                </div>
+                <!--Both COlumns closing closing-->
+            </div>
+            <!--Container closing-->
+        </section>
+
+                    </div>
                         <!--Card Closing-->
                     </div>
                     <!--Card Column Closing-->
@@ -263,7 +275,7 @@
 
     <!--Javascript/JQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="./js/signup.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

@@ -1,22 +1,52 @@
 body {
     font-family: 'Montserrat', sans-serif; 
-    background: #e5e5e5;
+}
+
+.is-hero-image {
+    background-image: url('https://jauntmagazine.files.wordpress.com/2015/03/aruba.jpg');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     background-color: #999;
 
 }
 
+#navbar-logo{
+    font-family: 'Prata', serif;
+    font-size: 20px;
+    color: white;
+}
 
 h1{
     font-size: 50px;
     text-align: center;
+    
 }
 
 #top-title{
     padding-top: 5%;
+   
 }
 
 
 .hero-body{
     padding-top: 2%;
+}
+
+#card-header{
+    color: black;
+}
+
+/*Packing table */
+#packing-table{
+    margin: 0 auto;
+     width: 100px; 
+    border-radius: 1rem;  
+}
+
+#card-subhead{
+    color: black;
 }
 
 /*TRIPS__________________________________________*/
@@ -49,6 +79,14 @@ border-radius: 1.5rem;
 }
 
 /*HOTEL DETAILS_______________________________________*/
+
+#content-1{
+    padding-top: 10%;
+}
+
+#button-details{
+    padding-bottom: 3%;
+}
 
 [type="date"] {
     background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;

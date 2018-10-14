@@ -1,8 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
-  const List = sequelize.define('list', {
+  const List = sequelize.define('List', {
     item: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     },
     packed: {
       type: DataTypes.BOOLEAN,

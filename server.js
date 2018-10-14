@@ -3,6 +3,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 var passport = require("./config/passport");
+var env = require('dotenv').load();
 
 var PORT = process.env.PORT || 1337;
 var db = require("./models");

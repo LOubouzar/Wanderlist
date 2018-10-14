@@ -21,7 +21,7 @@ $(document).ready(function(){
         };
     
         if (!userData.email || !userData.password) {
-          return;
+          return alert("Please enter valid log-in credentials.");
         }
     
         loginUser(userData.email, userData.password);

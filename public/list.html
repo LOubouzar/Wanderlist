@@ -2,331 +2,337 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WanderList</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WanderList</title>
 
-    <!-- Favicons -->
-    <link href="./media/favicon.png" rel="icon">
-    <link href="./media/favicon.png" rel="apple-touch-icon">
-    <!--Bulma-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-    <!-- Main Stylesheet File -->
-    <link href="./css/list.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link href="./media/favicon.png" rel="icon">
+  <link href="./media/favicon.png" rel="apple-touch-icon">
+  <!--Bulma-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="./css/list.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <!--Navbar-->
+<!--Navbar-->
 
-    <nav class="navbar is-fixed-top is-white is-info">
-        <div class="container">
-            <div class="navbar-brand">
-                <!-- <h6>WANDERLIST</h6> -->
-                <a class="navbar-item" href="#" id="navbar-logo">
-                       wanderlist
-                      </a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <div id="navbarMenuHeroA has-text-centered" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="#hero-header">
-                        START A TRIP
-                    </a>
-                    <a class="navbar-item" href="#hero-body">
-                        MY TRIPS
-                    </a>
-                    <a class="navbar-item" href="/logout">
-                        LOGOUT
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar is-fixed-top is-white is-info">
+  <div class="container">
+    <div class="navbar-brand">
+      <!-- <h6>WANDERLIST</h6> -->
+      <a class="navbar-item" href="#" id="navbar-logo">
+        wanderlist
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
+    <div id="navbarMenuHeroA has-text-centered" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#hero-header">
+          START A TRIP
+        </a>
+        <a class="navbar-item" href="#hero-body">
+          MY TRIPS
+        </a>
+        <a class="navbar-item" href="/logout">
+          LOGOUT
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+</div>
 
 
-    <!--LIST SECTION-->
-    <section class="hero is-primary is-fullheight is-hero-image">
-            <div class="hero-head">
+<!--LIST SECTION-->
+<section class="hero is-primary is-fullheight is-hero-image">
+  <div class="hero-head">
     <section class="section" id="section-list">
-        <div class="container">
-            <h1 class="title-planner" id="top-title">CHECKLIST</h1>
+      <div class="container">
+        <h1 class="title-planner" id="top-title">CHECKLIST</h1>
         <div class="column">
           <div class="table-container">
-                    <table class="table" id="packing-table">
-                    <thead>
-                        <tr>
-                            <td>Item</td>
-                            <td>Quantity</td>
-                            <td>Packed</td>
-                            <td>Delete</td>
-                        </tr>
-                    </thead>
-                    <tbody id="TextBoxContainer">
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th colspan="5">
-                        <!-- <button id="btnAdd" type="button" class="btn btn-primary" data-toggle="tooltip" data-original-title="Add more controls"><i class="glyphicon glyphicon-plus-sign"></i></button></th> -->
+            <form id="listForm">
+              <table class="table" id="packing-table">
+                <thead>
+                <tr>
+                  <td>Item</td>
+                  <td>Quantity</td>
+                  <td>Packed</td>
+                  <td>Delete</td>
+                </tr>
+                </thead>
+                <tbody id="TextBoxContainer">
+                <td><input name = "DynamicTextBox" type="text"class="item form-control" /></td>
+                <td><input name = "DynamicTextBox" type="text" class="quantity form-control" /></td>
+                <td><input name = "DynamicTextBox" type="checkbox" class="packed" value="false" /></td>
+                <td><button type="button" class="btn btn-danger remove"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th colspan="5">
+                    <!-- <button id="btnAdd" type="button" class="btn btn-primary" data-toggle="tooltip" data-original-title="Add more controls"><i class="glyphicon glyphicon-plus-sign"></i></button></th> -->
 
-                        <a class="button" id="btnAdd"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
-                        <a class="button is-primary has-text-centered" id="button1">SAVE</a>
-                      </tr>
-                    </tfoot>
-                    </table>
-                    </div>
-                </div>
+                    <a class="button" id="btnAdd"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                    <button type="submit" class="button is-primary has-text-centered" id="button1">SAVE</button>
+                </tr>
+                </tfoot>
+              </table>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
     <!--HOTEL & FLIGHT-->
     <section class="hero" id="hero2">
-        <div class="hero-body" id="hero-body">
-            <div class="container">
-                <h1 class="title-planner">HOTEL & FLIGHT</h1>
-                <br>
+      <div class="hero-body" id="hero-body">
+        <div class="container">
+          <h1 class="title-planner">HOTEL & FLIGHT</h1>
+          <br>
 
-                <div class="columns">
-                    <div class="column is-6">
-                        <!--CARD ONE-->
-                        <div class="card" id="hotel-card">
+          <div class="columns">
+            <div class="column is-6">
+              <!--CARD ONE-->
+              <div class="card" id="hotel-card">
 
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-content">
-                                        <p class="title is-5" id="card-header">UPLOAD HOTEL DETAILS</p>
-                                    </div>
-                                </div>
-
-                                <div class="content" id="content-1">
-                                    <form class="hotel">
-                                        <div class="columns">
-                                            <div class="column is-4">
-                                        <label for="dateofbirth">Arrival</label>
-                                        <input type="date" name="dateofbirth" id="arrivaldates"> 
-                                    </div>
-                                    <div class="column is-4">
-                                        <label for="dateofbirth">Departure</label>
-                                        <input type="date" name="dateofbirth" id="departuredates">
-                                    </div>
-                                    </div>
-                                </form>
-                                <br>
-
-
-                                <form class="hotel">
-                                        <label for="dateofbirth">Location</label>
-                                        <input type="text" placeholder="Street Address" id="address">&nbsp;
-                                        <input type="text" placeholder="Country/State" id="country">
-                                        <br>
-                                        <br>
-                                        <input type="text" placeholder="City" id="city">&nbsp;&nbsp;<input type="text" placeholder="Zip Code" id="zip-code">
-                                        
-                                </form>
-                                <br>
-
-                                <form class="hotel-location-info">
-                                        <label for="hotelconfirmation">Hotel Confirmation Number</label>
-                                        <input type="text" placeholder="Number" id="hotel-number">&nbsp;
-                                        
-                                        
-                                </form>
-                                <br>
-                                <div class="button1 has-text-centered" id="button-details">
-                                <a class="button is-primary has-text-centered" id="button1">ADD DETAILS</a>
-                            </div>
-
-                                </div> <!--End Content-->
-                            </div>
-                        </div>
-
-
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-5" id="card-header">UPLOAD HOTEL DETAILS</p>
                     </div>
-                    <!--End column 1-->
+                  </div>
 
-
-                    <!--CARD TWO-->
-                    <div class="column is-6">
-                        <div class="card" id="hotel-card">
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-content">
-                                        <p class="title is-5" id="card-header">UPLOAD FLIGHT DETAILS</p>
-                                    </div>
-                                </div>
-
-                                <div class="content">
-                                        <p class="title is-6" id="card-subhead">Departing Flight</p>
-                                        <form class="flight-time-1">
-                                                <div class="columns">
-                                                <div class="column is-4">
-                                                <label for="time-arrival">Departure Time</label>
-                                                <input type="text" placeholder="00:00 AM/PM" id="departing-flight-1"> 
-                                            </div>
-                                            <div class="column is-2">
-                                                    <label for="time-arrival">Airport</label>
-                                                    <input type="text" placeholder="IAD" id="airport-1"> 
-                                                </div>
-                                            <div class="column is-4">
-                                                <label for="time-departure">Arrival Time</label>
-                                                <input type="text" placeholder="00:00 AM/PM" id="arrival-flight-1"> 
-                                            </div>
-                                            <div class="column is-2">
-                                                    <label for="time-arrival">Airport</label>
-                                                    <input type="text" placeholder="IAD" id="airport-2"> 
-                                                </div>
-                                            </div>
-                                        </form>
-
-                                        <form class="flight-time-1">
-                                                <div class="columns">
-                                                    <div class="column is-4">
-                                                <label for="time-arrival">Flight #</label>
-                                                <input type="text" placeholder="Number" id="flight-number-1"> 
-                                            </div>
-                                            <div class="column is-4">
-                                                <label for="time-departure">Seat #</label>
-                                                <input type="text" placeholder="Number" id="seat-number-1"> 
-                                            </div>
-                                            <div class="column is-4">
-                                                    <label for="time-departure">Confirmation#</label>
-                                                    <input type="text" placeholder="Number" id="confirmation-number-1"> 
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <br>
-
-
-
-
-
-                                        <p class="title is-6" id="card-subhead">Return Flight</p>
-                                        <form class="flight-time-1">
-                                                <div class="columns">
-                                                <div class="column is-4">
-                                                <label for="time-arrival">Departure Time</label>
-                                                <input type="text" placeholder="00:00 AM/PM" id="departing-flight-2"> 
-                                            </div>
-                                            <div class="column is-2">
-                                                    <label for="time-arrival">Airport</label>
-                                                    <input type="text" placeholder="IAD" id="airport-3"> 
-                                                </div>
-                                            <div class="column is-4">
-                                                <label for="time-departure">Arrival Time</label>
-                                                <input type="text" placeholder="00:00 AM/PM" id="arrival-flight-1"> 
-                                            </div>
-                                            <div class="column is-2">
-                                                    <label for="time-arrival">Airport</label>
-                                                    <input type="text" placeholder="IAD" id="airport-4"> 
-                                                </div>
-                                            </div>
-                                        </form>
-
-                                        <form class="flight-time-1">
-                                                <div class="columns">
-                                                    <div class="column is-4">
-                                                <label for="time-arrival">Flight #</label>
-                                                <input type="text" placeholder="Number" id="flight-number-2"> 
-                                            </div>
-                                            <div class="column is-4">
-                                                <label for="time-departure">Seat #</label>
-                                                <input type="text" placeholder="Number" id="seat-number-2"> 
-                                            </div>
-                                            <div class="column is-4">
-                                                    <label for="time-departure">Confirmation#</label>
-                                                    <input type="text" placeholder="Number" id="confirmation-number-2"> 
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <br>
-                                        <div class="button1 has-text-centered">
-                                        <a class="button is-primary has-text-centered" id="button2">ADD DETAILS</a>
-
-
-
-
-
-                                </div>
-                            </div>
+                  <div class="content" id="content-1">
+                    <form class="hotel">
+                      <div class="columns">
+                        <div class="column is-4">
+                          <label for="dateofbirth">Arrival</label>
+                          <input type="date" name="dateofbirth" id="arrivaldates">
                         </div>
+                        <div class="column is-4">
+                          <label for="dateofbirth">Departure</label>
+                          <input type="date" name="dateofbirth" id="departuredates">
+                        </div>
+                      </div>
+                    </form>
+                    <br>
 
+
+                    <form class="hotel">
+                      <label for="dateofbirth">Location</label>
+                      <input type="text" placeholder="Street Address" id="address">&nbsp;
+                      <input type="text" placeholder="Country/State" id="country">
+                      <br>
+                      <br>
+                      <input type="text" placeholder="City" id="city">&nbsp;&nbsp;<input type="text" placeholder="Zip Code" id="zip-code">
+
+                    </form>
+                    <br>
+
+                    <form class="hotel-location-info">
+                      <label for="hotelconfirmation">Hotel Confirmation Number</label>
+                      <input type="text" placeholder="Number" id="hotel-number">&nbsp;
+
+
+                    </form>
+                    <br>
+                    <div class="button1 has-text-centered" id="button-details">
+                      <a class="button is-primary has-text-centered" id="button1">ADD DETAILS</a>
                     </div>
-                    <!--End column 2-->
 
+                  </div> <!--End Content-->
                 </div>
-                <!--end columns-->
+              </div>
+
+
             </div>
-            <!--End container-->
+            <!--End column 1-->
+
+
+            <!--CARD TWO-->
+            <div class="column is-6">
+              <div class="card" id="hotel-card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-5" id="card-header">UPLOAD FLIGHT DETAILS</p>
+                    </div>
+                  </div>
+
+                  <div class="content">
+                    <p class="title is-6" id="card-subhead">Departing Flight</p>
+                    <form class="flight-time-1">
+                      <div class="columns">
+                        <div class="column is-4">
+                          <label for="time-arrival">Departure Time</label>
+                          <input type="text" placeholder="00:00 AM/PM" id="departing-flight-1">
+                        </div>
+                        <div class="column is-2">
+                          <label for="time-arrival">Airport</label>
+                          <input type="text" placeholder="IAD" id="airport-1">
+                        </div>
+                        <div class="column is-4">
+                          <label for="time-departure">Arrival Time</label>
+                          <input type="text" placeholder="00:00 AM/PM" id="arrival-flight-1">
+                        </div>
+                        <div class="column is-2">
+                          <label for="time-arrival">Airport</label>
+                          <input type="text" placeholder="IAD" id="airport-2">
+                        </div>
+                      </div>
+                    </form>
+
+                    <form class="flight-time-1">
+                      <div class="columns">
+                        <div class="column is-4">
+                          <label for="time-arrival">Flight #</label>
+                          <input type="text" placeholder="Number" id="flight-number-1">
+                        </div>
+                        <div class="column is-4">
+                          <label for="time-departure">Seat #</label>
+                          <input type="text" placeholder="Number" id="seat-number-1">
+                        </div>
+                        <div class="column is-4">
+                          <label for="time-departure">Confirmation#</label>
+                          <input type="text" placeholder="Number" id="confirmation-number-1">
+                        </div>
+                      </div>
+                    </form>
+                    <br>
+
+
+
+
+
+                    <p class="title is-6" id="card-subhead">Return Flight</p>
+                    <form class="flight-time-1">
+                      <div class="columns">
+                        <div class="column is-4">
+                          <label for="time-arrival">Departure Time</label>
+                          <input type="text" placeholder="00:00 AM/PM" id="departing-flight-2">
+                        </div>
+                        <div class="column is-2">
+                          <label for="time-arrival">Airport</label>
+                          <input type="text" placeholder="IAD" id="airport-3">
+                        </div>
+                        <div class="column is-4">
+                          <label for="time-departure">Arrival Time</label>
+                          <input type="text" placeholder="00:00 AM/PM" id="arrival-flight-1">
+                        </div>
+                        <div class="column is-2">
+                          <label for="time-arrival">Airport</label>
+                          <input type="text" placeholder="IAD" id="airport-4">
+                        </div>
+                      </div>
+                    </form>
+
+                    <form class="flight-time-1">
+                      <div class="columns">
+                        <div class="column is-4">
+                          <label for="time-arrival">Flight #</label>
+                          <input type="text" placeholder="Number" id="flight-number-2">
+                        </div>
+                        <div class="column is-4">
+                          <label for="time-departure">Seat #</label>
+                          <input type="text" placeholder="Number" id="seat-number-2">
+                        </div>
+                        <div class="column is-4">
+                          <label for="time-departure">Confirmation#</label>
+                          <input type="text" placeholder="Number" id="confirmation-number-2">
+                        </div>
+                      </div>
+                    </form>
+                    <br>
+                    <div class="button1 has-text-centered">
+                      <a class="button is-primary has-text-centered" id="button2">ADD DETAILS</a>
+
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!--End column 2-->
+
+            </div>
+            <!--end columns-->
+          </div>
+          <!--End container-->
         </div>
         <!--end hero wrap-->
     </section>
 
-<!--HOTEL & FLIGHT-->
-<section class="hero" id="hero2">
-        <div class="hero-body" id="hero-body">
-            <div class="container">
-                <h1 class="title-planner">ITINERARY</h1>
+    <!--HOTEL & FLIGHT-->
+    <section class="hero" id="hero2">
+      <div class="hero-body" id="hero-body">
+        <div class="container">
+          <h1 class="title-planner">ITINERARY</h1>
 
-            </div>
         </div>
+      </div>
 
+    </section>
 </section>
-</section>
 
 
 
-    <!--Footer-->
-    <footer class="footer" id="footer">
-        <div class="columns">
-            <div class="column is-2 is-offset-1">
-                <p>
-                    <strong>WANDERLIST</strong>
-                </p>
-                <p>1101 K St. NW
-                    <br>
-                    Suite 200
-                    <br>
-                    Washington, DC 20005
+<!--Footer-->
+<footer class="footer" id="footer">
+  <div class="columns">
+    <div class="column is-2 is-offset-1">
+      <p>
+        <strong>WANDERLIST</strong>
+      </p>
+      <p>1101 K St. NW
+        <br>
+        Suite 200
+        <br>
+        Washington, DC 20005
 
-                </p>
-            </div>
-            <div class="column is-2">
-                <strong>CONTACT US</strong>
-                <br>
-                <img src="./media/icons8-envelope-50.png" class="logo1-icons">
-                <a href="mailto:info@wanderlist.com" id="emailTag">info@wanderlist.com</a>
-                <br>
-                <img src="./media/icons8-phone-50.png" class="logo1-icons">
-                555-555-5555
-            </div>
-            <div class="column is-2">
-                <strong>CONNECT</strong>
-                <br>
-                <img src="./media/icons8-facebook-circled-filled-50.png" id="social">
-                <img src="./media/icons8-pinterest-filled-50.png" id="social">
-                <img src="./media/icons8-twitter-circled-filled-50.png" id="social">
-            </div>
-        </div>
-        </div>
-    </footer>
+      </p>
+    </div>
+    <div class="column is-2">
+      <strong>CONTACT US</strong>
+      <br>
+      <img src="./media/icons8-envelope-50.png" class="logo1-icons">
+      <a href="mailto:info@wanderlist.com" id="emailTag">info@wanderlist.com</a>
+      <br>
+      <img src="./media/icons8-phone-50.png" class="logo1-icons">
+      555-555-5555
+    </div>
+    <div class="column is-2">
+      <strong>CONNECT</strong>
+      <br>
+      <img src="./media/icons8-facebook-circled-filled-50.png" id="social">
+      <img src="./media/icons8-pinterest-filled-50.png" id="social">
+      <img src="./media/icons8-twitter-circled-filled-50.png" id="social">
+    </div>
+  </div>
+  </div>
+</footer>
 
 
-    <!--Javascript/JQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<!--Javascript/JQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
-    <script src="./js/list.js"></script>
+<script src="./js/list.js"></script>
 </body>
 
 </html>

@@ -21,4 +21,8 @@ module.exports = function(app) {
   app.get("/list", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/list.html"));
   });
+
+  app.get("/showlists", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/show-lists.html"));
+  });
 };

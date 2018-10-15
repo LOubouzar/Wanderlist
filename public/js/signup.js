@@ -26,7 +26,7 @@ $(document).ready(function () {
   signUpForm.on("submit", function (event) {
     
     event.preventDefault();
-    console.log("Hi!");
+    // console.log("Sign up form!");
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
@@ -51,7 +51,7 @@ $(document).ready(function () {
   };
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+    $("#alert.msg").text(err.responseJSON);
     $("#alert").fadeIn(500);
   };
 

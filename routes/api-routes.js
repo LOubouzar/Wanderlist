@@ -23,9 +23,9 @@ module.exports = function(app) {
   app.post("/api/lists", function(req, res) {
     console.log(req.body);
     db.List.create({
-      item: req.body.value1,
-      quantity: req.body.value2,
-      packed: req.body.value4
+      item: req.body.item,
+      quantity: req.body.quantity,
+      packed: req.body.packed
     }).then(function() {
       res.redirect(307, "/api/lists");
     }).catch(function(err) {
@@ -36,24 +36,24 @@ module.exports = function(app) {
 
   // GET route for getting all the lists
   app.get("/api/lists/", function(req, res) {
-    db.Post.findAll({where: {email: req.params.email}})
-      .then(function(dbPost) {
-        res.json(dbPost);
+    db.List.findAll({where: {email: req.params.email}})
+      .then(function(dbList) {
+        res.json(dbList);
       });
   });
 
-  // DELETE route for deleting list items
-  //not sure if ID will work
-  app.delete("/api/lists/:id", function(req, res) {
-    db.Post.destroy({
-      where: {
-        id: req.params.id
-      }
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
-  });
+  // // DELETE route for deleting list items
+  // //not sure if ID will work
+  // app.delete("/api/lists/:email", function(req, res) {
+  //   db.List.destroy({
+  //     where: {
+  //       email: req.params.email
+  //     }
+  //   })
+  //     .then(function(dbList) {
+  //       res.json(dbList);
+  //     });
+  // });
 
 //GET route logout
   app.get("/logout", function(req, res) {
@@ -61,8 +61,12 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
-//this is for reference?
+//user_data to be used client side
+  const user_data = {};
+
+
   app.get("/api/user_data", function(req, res) {
+
     if (!req.user) {
       res.json({});
     }
@@ -71,6 +75,8 @@ module.exports = function(app) {
         email: req.user.email,
         id: req.user.id
       });
+      user_data.push = res.json;
+      console.log(user_data);
     }
   });
 };

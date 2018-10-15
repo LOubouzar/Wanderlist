@@ -65,6 +65,7 @@
             <h1 class="title-planner" id="top-title">CHECKLIST</h1>
         <div class="column">
           <div class="table-container">
+            <form id="listForm">
                     <table class="table" id="packing-table">
                     <thead>
                         <tr>
@@ -75,6 +76,8 @@
                         </tr>
                     </thead>
                     <tbody id="TextBoxContainer">
+                    <td><input name = "DynamicTextBox" type="text"class="item form-control" /></td>
+                    <td><input name = "DynamicTextBox" type="text" class="quantity form-control" /></td><td><input name = "DynamicTextBox" type="checkbox" class="packed" /></td><td><button type="button" class="btn btn-danger remove"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
                     </tbody>
                     <tfoot>
                       <tr>
@@ -82,10 +85,11 @@
                         <!-- <button id="btnAdd" type="button" class="btn btn-primary" data-toggle="tooltip" data-original-title="Add more controls"><i class="glyphicon glyphicon-plus-sign"></i></button></th> -->
 
                         <a class="button" id="btnAdd"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
-                        <a class="button is-primary has-text-centered" id="button1">SAVE</a>
+                        <button type="submit" class="button is-primary has-text-centered" id="button1">SAVE</button>
                       </tr>
                     </tfoot>
                     </table>
+            </form>
                     </div>
                 </div>
         </div>

@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     // A List can't be created without a User due to the foreign key constraint
     List.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };

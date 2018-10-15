@@ -19,6 +19,9 @@
 // }
 
 $(document).ready(function() {
+  $(".packed").is(':checked', function(){
+    $(".packed").prop('checked', true);
+  });
   // Gets an optional query string from our url (i.e. ?post_id=23)
   var url = window.location.search;
   var listId;
@@ -42,6 +45,7 @@ $(document).ready(function() {
   // on submit form el
   $(listForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
+    console.log(packedInput.val());
     // wont submit if item or quantity fields are empty
     if (!quantityInput.val().trim() || !itemInput.val().trim()) {
       return alert("Please complete the form fields.");

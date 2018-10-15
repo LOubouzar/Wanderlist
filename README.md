@@ -15,5 +15,3 @@ Wanderlist was built in JavaScript using Node.js and MySQL. We utilized HTML, CS
  * Lauren McDonough
  * Laura Ibrahim
 
-
-
